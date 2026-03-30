@@ -49,7 +49,7 @@
     --font-body: 'Poppins', sans-serif;
 
     --shadow-card: 0 4px 24px -4px hsl(34 38% 58% / 0.10);
-    --shadow-elevated: 0 8px 40px -8px hsl(34 38% 58% / 0.15);
+    --shadow-elevated: 0 12px 48px -8px hsl(34 38% 58% / 0.18);
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -77,7 +77,7 @@
   }
 }
 
-/* IvyPresto Display via Adobe Fonts fallback — using a web-safe serif stack */
+/* IvyPresto Display via Adobe Fonts fallback */
 @font-face {
   font-family: 'ivypresto-display';
   src: local('ivypresto-display'), local('IvyPresto Display');
@@ -107,4 +107,92 @@ html {
 ::-webkit-scrollbar-thumb {
   background: hsl(var(--gold-light));
   border-radius: 3px;
+}
+
+/* Scroll reveal utilities */
+@layer utilities {
+  .reveal-base {
+    opacity: 0;
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .reveal-up {
+    transform: translateY(40px);
+  }
+
+  .reveal-left {
+    transform: translateX(-40px);
+  }
+
+  .reveal-right {
+    transform: translateX(40px);
+  }
+
+  .reveal-scale {
+    transform: scale(0.92);
+  }
+
+  .reveal-visible {
+    opacity: 1 !important;
+    transform: translateY(0) translateX(0) scale(1) !important;
+  }
+
+  /* Staggered children */
+  .stagger-children > * {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .stagger-children.reveal-visible > *:nth-child(1) { transition-delay: 0.05s; }
+  .stagger-children.reveal-visible > *:nth-child(2) { transition-delay: 0.15s; }
+  .stagger-children.reveal-visible > *:nth-child(3) { transition-delay: 0.25s; }
+  .stagger-children.reveal-visible > *:nth-child(4) { transition-delay: 0.35s; }
+  .stagger-children.reveal-visible > *:nth-child(5) { transition-delay: 0.45s; }
+  .stagger-children.reveal-visible > *:nth-child(6) { transition-delay: 0.55s; }
+
+  .stagger-children.reveal-visible > * {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Gold shimmer button effect */
+  .btn-shimmer {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn-shimmer::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      hsla(0, 0%, 100%, 0.2),
+      transparent
+    );
+    transition: left 0.5s ease;
+  }
+
+  .btn-shimmer:hover::after {
+    left: 100%;
+  }
+
+  /* Glass card effect */
+  .glass-card {
+    background: hsla(0, 0%, 100%, 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid hsl(var(--border));
+  }
+
+  /* Decorative gradient orb */
+  .gold-orb {
+    background: radial-gradient(circle, hsl(var(--gold) / 0.12) 0%, transparent 70%);
+  }
 }
