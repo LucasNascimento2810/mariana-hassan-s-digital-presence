@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Phone, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import logoGold from "@/assets/logo-gold.png";
 
 const WHATSAPP_URL = "https://api.whatsapp.com/send?phone=5521971414321&text=Ol%C3%A1,%20gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Dra.%20Mariana%20Hassan.";
@@ -68,6 +68,9 @@ const Header = () => {
           {/* Mobile menu button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label={mobileMenuOpen ? "Fechar menu" : "Abrir menu"}
+            aria-expanded={mobileMenuOpen}
+            aria-controls="mobile-nav"
             className="lg:hidden flex items-center justify-center w-10 h-10 rounded-full text-foreground hover:text-gold transition-colors"
           >
             {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -78,6 +81,7 @@ const Header = () => {
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Abrir conversa no WhatsApp"
             className="lg:hidden flex items-center justify-center w-10 h-10 rounded-full bg-gold text-primary-foreground"
           >
             <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
@@ -89,6 +93,7 @@ const Header = () => {
 
       {/* Mobile nav dropdown */}
       <div
+        id="mobile-nav"
         className={`lg:hidden overflow-hidden transition-all duration-500 ${
           mobileMenuOpen ? "max-h-80 opacity-100" : "max-h-0 opacity-0"
         }`}

@@ -7,7 +7,7 @@ const AboutSection = () => {
   const { ref, isVisible } = useScrollReveal();
 
   return (
-    <section id="sobre" className="py-20 md:py-28 bg-background relative overflow-hidden">
+    <section id="sobre" className="scroll-mt-24 md:scroll-mt-28 py-20 md:py-28 bg-background relative overflow-hidden">
       {/* Decorative orb */}
       <div className="absolute -right-40 top-1/2 -translate-y-1/2 w-96 h-96 gold-orb rounded-full pointer-events-none" />
 

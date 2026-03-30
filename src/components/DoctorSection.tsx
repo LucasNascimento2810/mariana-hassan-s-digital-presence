@@ -8,7 +8,7 @@ const DoctorSection = () => {
   const { ref, isVisible } = useScrollReveal();
 
   return (
-    <section id="dra-mariana" className="py-20 md:py-28 bg-cream relative overflow-hidden">
+    <section id="dra-mariana" className="scroll-mt-24 md:scroll-mt-28 py-20 md:py-28 bg-cream relative overflow-hidden">
       <div className="absolute -right-20 bottom-0 w-80 h-80 gold-orb rounded-full pointer-events-none" />
 
       <div ref={ref} className="container mx-auto px-4 md:px-8 relative z-10">

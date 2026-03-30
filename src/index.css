@@ -72,24 +72,49 @@
     font-family: var(--font-body);
   }
 
+  button,
+  input,
+  select,
+  textarea {
+    font-family: var(--font-body);
+  }
+
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display);
   }
 }
 
-/* IvyPresto Display via Adobe Fonts fallback */
+/* Ivy Presto Display web fonts */
 @font-face {
   font-family: 'ivypresto-display';
-  src: local('ivypresto-display'), local('IvyPresto Display');
-  font-weight: 100 900;
+  src: url('/fonts/ivy-presto-display-thin.otf') format('opentype');
+  font-display: swap;
+  font-weight: 100;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'ivypresto-display';
-  src: local('ivypresto-display'), local('IvyPresto Display');
-  font-weight: 100 900;
-  font-style: italic;
+  src: url('/fonts/ivy-presto-display-light.otf') format('opentype');
+  font-display: swap;
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ivypresto-display';
+  src: url('/fonts/ivy-presto-display-regular.otf') format('opentype');
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ivypresto-display';
+  src: url('/fonts/ivy-presto-display-semibold.otf') format('opentype');
+  font-display: swap;
+  font-weight: 600;
+  font-style: normal;
 }
 
 /* Smooth scroll */

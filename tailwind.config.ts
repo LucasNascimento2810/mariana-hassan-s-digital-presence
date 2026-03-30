@@ -14,6 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
+        sans: ['Poppins', 'sans-serif'],
+        serif: ['ivypresto-display', 'Georgia', 'Times New Roman', 'serif'],
         display: ['ivypresto-display', 'Georgia', 'Times New Roman', 'serif'],
         body: ['Poppins', 'sans-serif'],
       },

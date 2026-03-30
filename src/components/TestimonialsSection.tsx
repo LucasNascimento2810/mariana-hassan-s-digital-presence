@@ -23,7 +23,7 @@ const TestimonialsSection = () => {
   const { ref, isVisible } = useScrollReveal();
 
   return (
-    <section id="depoimentos" className="py-20 md:py-28 bg-background relative overflow-hidden">
+    <section id="depoimentos" className="scroll-mt-24 md:scroll-mt-28 py-20 md:py-28 bg-background relative overflow-hidden">
       <div className="absolute -left-20 bottom-20 w-64 h-64 gold-orb rounded-full pointer-events-none" />
 
       <div ref={ref} className="container mx-auto px-4 md:px-8 relative z-10">

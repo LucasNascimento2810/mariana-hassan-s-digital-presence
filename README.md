@@ -1,3 +1,9 @@
-# Welcome to your Lovable project
+# Mariana Hassan Digital Presence
 
-TODO: Document your project here
+Projeto institucional em React + Vite.
+
+## Scripts
+
+- `npm install`
+- `npm run dev`
+- `npm run build`
