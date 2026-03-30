@@ -6,7 +6,7 @@ const WhatsAppFloat = () => {
       href={WHATSAPP_URL}
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-[#25D366] hover:bg-[#20BD5A] text-primary-foreground rounded-full flex items-center justify-center shadow-elevated transition-transform hover:scale-110"
+      className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-[#25D366] hover:bg-[#20BD5A] text-primary-foreground rounded-full flex items-center justify-center shadow-elevated transition-all duration-300 hover:scale-110 active:scale-95 animate-pulse-glow"
       aria-label="WhatsApp"
     >
       <svg className="w-7 h-7" viewBox="0 0 24 24" fill="currentColor">
