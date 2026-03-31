@@ -16,7 +16,7 @@ const Footer = () => {
       <div className="container relative z-10 mx-auto px-4 md:px-8">
         <div className={`mb-12 grid gap-12 md:grid-cols-3 stagger-children ${isVisible ? "reveal-visible" : ""}`}>
           <div>
-            <img src={logoGold} alt="Dra. Mariana Hassan" className="mb-6 h-16 brightness-150" />
+            <img src={logoGold} alt="Dra. Mariana Hassan" className="mb-6 h-20 w-auto brightness-150 md:h-24" />
             <p className="font-body text-sm leading-relaxed text-primary-foreground/70">
               Cirurgia Geral e Endoscopia Digestiva. Atendimento humanizado e tratamento individualizado.
             </p>
