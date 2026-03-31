@@ -81,6 +81,9 @@
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display);
+    font-weight: 300;
+    letter-spacing: -0.02em;
+    font-synthesis: none;
   }
 }
 
@@ -219,5 +222,41 @@ html {
   /* Decorative gradient orb */
   .gold-orb {
     background: radial-gradient(circle, hsl(var(--gold) / 0.12) 0%, transparent 70%);
+  }
+
+  h1.font-display,
+  h2.font-display,
+  h3.font-display,
+  h4.font-display,
+  h5.font-display,
+  h6.font-display {
+    font-weight: 300;
+    font-synthesis: none;
+  }
+
+  .font-display {
+    font-weight: 400;
+    font-synthesis: none;
+  }
+
+  .hero-panel-gradient {
+    background: linear-gradient(
+      270deg,
+      #bd996b 0%,
+      rgba(189, 153, 107, 0.92) 42%,
+      rgba(219, 198, 172, 0.72) 68%,
+      rgba(255, 255, 255, 0.24) 88%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  }
+
+  .hero-panel-gradient-mobile {
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(240, 228, 214, 0.7) 24%,
+      rgba(189, 153, 107, 0.88) 62%,
+      #bd996b 100%
+    );
   }
 }

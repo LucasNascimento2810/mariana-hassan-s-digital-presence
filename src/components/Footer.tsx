@@ -5,52 +5,93 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 const WHATSAPP_URL =
   "https://api.whatsapp.com/send?phone=5521971414321&text=Ol%C3%A1,%20gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Dra.%20Mariana%20Hassan.";
 
+const EMAIL = "dramarianahassan@gmail.com";
+
+const LOCATION_LINES = [
+  "Av. Ayrton Senna, 3000, Rio de Janeiro",
+  "Via Parque Comfort Working",
+  "Edifício Itanhangá, Sala 3095",
+];
+
+const MAP_QUERY = LOCATION_LINES.join(", ");
+
+const MAP_EMBED_URL = `https://www.google.com/maps?q=${encodeURIComponent(
+  MAP_QUERY
+)}&z=15&output=embed`;
+
+const MAPS_URL = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+  MAP_QUERY
+)}`;
+
 const Footer = () => {
   const { ref, isVisible } = useScrollReveal();
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer ref={ref} className="relative overflow-hidden bg-foreground py-16 text-primary-foreground">
+    <footer
+      ref={ref}
+      className="relative overflow-hidden bg-foreground py-16 text-primary-foreground"
+    >
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-gold/5" />
 
       <div className="container relative z-10 mx-auto px-4 md:px-8">
-        <div className={`mb-12 grid gap-12 md:grid-cols-3 stagger-children ${isVisible ? "reveal-visible" : ""}`}>
-          <div>
-            <img src={logoGold} alt="Dra. Mariana Hassan" className="mb-6 h-20 w-auto brightness-150 md:h-24" />
+        <div
+          className={`mb-12 grid gap-10 md:grid-cols-2 xl:grid-cols-[1.1fr_1fr_0.9fr_1.05fr] stagger-children ${
+            isVisible ? "reveal-visible" : ""
+          }`}
+        >
+          <div className="max-w-xs">
+            <img
+              src={logoGold}
+              alt="Dra. Mariana Hassan"
+              className="mb-6 h-20 w-auto brightness-150 md:h-24"
+            />
+
             <p className="font-body text-sm leading-relaxed text-primary-foreground/70">
-              Cirurgia Geral e Endoscopia Digestiva. Atendimento humanizado e tratamento individualizado.
+              Cirurgia Geral e Endoscopia Digestiva. Atendimento humanizado e
+              tratamento individualizado.
             </p>
           </div>
 
-          <div>
-            <h3 className="mb-4 font-display text-lg text-primary-foreground">Localização</h3>
+          <div className="max-w-xs">
+            <h3 className="mb-4 font-display text-lg text-primary-foreground">
+              Localização
+            </h3>
+
             <div className="group mb-4 flex items-start gap-3">
               <MapPin className="mt-1 h-4 w-4 flex-shrink-0 text-gold transition-transform duration-300 group-hover:scale-110" />
               <p className="font-body text-sm text-primary-foreground/70">
-                Av. Ayrton Senna, 3000, Rio de Janeiro
-                <br />
-                Via Parque Comfort Working
-                <br />
-                Edifício Itanhangá, Sala 3095
+                {LOCATION_LINES.map((line) => (
+                  <span key={line} className="block">
+                    {line}
+                  </span>
+                ))}
               </p>
             </div>
+
             <div className="group mb-4 flex items-start gap-3">
               <Clock className="mt-1 h-4 w-4 flex-shrink-0 text-gold transition-transform duration-300 group-hover:scale-110" />
-              <p className="font-body text-sm text-primary-foreground/70">Segunda a sexta: 9h às 18h</p>
+              <p className="font-body text-sm text-primary-foreground/70">
+                Segunda a sexta: 9h às 18h
+              </p>
             </div>
+
             <div className="group flex items-start gap-3">
               <Mail className="mt-1 h-4 w-4 flex-shrink-0 text-gold transition-transform duration-300 group-hover:scale-110" />
               <a
-                href="mailto:dramarianahassan@gmail.com"
+                href={`mailto:${EMAIL}`}
                 className="font-body text-sm text-primary-foreground/70 transition-colors duration-300 hover:text-gold"
               >
-                dramarianahassan@gmail.com
+                {EMAIL}
               </a>
             </div>
           </div>
 
-          <div>
-            <h3 className="mb-4 font-display text-lg text-primary-foreground">Contato</h3>
+          <div className="max-w-xs">
+            <h3 className="mb-4 font-display text-lg text-primary-foreground">
+              Contato
+            </h3>
+
             <a
               href={WHATSAPP_URL}
               target="_blank"
@@ -63,6 +104,7 @@ const Footer = () => {
               </svg>
               (21) 97141-4321
             </a>
+
             <div className="mt-4 flex gap-3">
               <a
                 href="https://www.instagram.com/marihassan/"
@@ -75,6 +117,7 @@ const Footer = () => {
                   <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
                 </svg>
               </a>
+
               <a
                 href="https://www.facebook.com/mari.hassan.54"
                 target="_blank"
@@ -88,11 +131,39 @@ const Footer = () => {
               </a>
             </div>
           </div>
+
+          <div className="w-full max-w-[15rem] xl:ml-auto">
+            <p className="mb-3 flex items-center gap-3 font-body text-xs uppercase tracking-[0.3em] text-gold">
+              <span className="inline-block h-px w-8 bg-gold" />
+              Como chegar
+            </p>
+
+            <div className="overflow-hidden rounded-[1.1rem] border border-primary-foreground/10 bg-primary-foreground/5 shadow-elevated">
+              <iframe
+                title="Mapa do consultório da Dra. Mariana Hassan"
+                src={MAP_EMBED_URL}
+                className="h-[220px] w-full border-0"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
+
+            <a
+              href={MAPS_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 inline-flex items-center gap-2 rounded-full border border-gold/30 px-5 py-2.5 font-body text-sm text-gold transition-all duration-300 hover:border-gold hover:bg-gold/10 hover:text-gold-light"
+            >
+              <MapPin className="h-4 w-4" />
+              Abrir no Google Maps
+            </a>
+          </div>
         </div>
 
         <div className="border-t border-primary-foreground/10 pt-8 text-center">
           <p className="font-body text-xs text-primary-foreground/50">
-            Dra. Mariana Hassan | CRM-RJ 52.108898-6 | © {currentYear} Todos os direitos reservados.
+            Dra. Mariana Hassan | CRM-RJ 52.108898-6 | © {currentYear} Todos os
+            direitos reservados.
           </p>
         </div>
       </div>
