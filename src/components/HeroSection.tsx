@@ -40,7 +40,7 @@ const HeroSection = () => {
               Dra. Mariana Hassan
             </p>
             <p className="mb-6 font-body text-xs text-muted-foreground">CRM-RJ 52.108898-6</p>
-            <h1 className="mb-6 font-display text-4xl font-normal leading-[1.04] text-foreground md:text-5xl lg:text-6xl">
+            <h1 className="mb-6 font-display text-4xl font-light leading-[1.04] text-foreground md:text-5xl lg:text-6xl">
               Cuidado com <em className="text-gold not-italic">excelência</em> em cirurgia e endoscopia
             </h1>
             <p className="mb-8 font-body text-base leading-relaxed text-muted-foreground md:text-lg">
