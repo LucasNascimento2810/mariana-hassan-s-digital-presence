@@ -66,7 +66,7 @@ const HeroSection = () => {
               </svg>
             </a>
             <p className="mt-4 font-body text-sm text-muted-foreground">
-              Atendimento em <strong className="text-foreground">Rio de Janeiro</strong>
+              Atendimento em <span className="text-foreground">Rio de Janeiro</span>
             </p>
           </div>
 
