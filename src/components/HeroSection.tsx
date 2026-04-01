@@ -10,7 +10,7 @@ const HeroSection = () => {
   return (
     <section
       ref={ref}
-      className="relative min-h-screen overflow-hidden bg-[linear-gradient(180deg,hsl(var(--cream))_0%,hsl(var(--background))_84%)] pt-24 md:pt-28"
+      className="relative overflow-hidden bg-[linear-gradient(180deg,hsl(var(--cream))_0%,hsl(var(--background))_84%)] pt-20 md:pt-24"
     >
       <div className="pointer-events-none absolute left-10 top-20 h-72 w-72 animate-float rounded-full gold-orb" />
       <div
@@ -28,7 +28,7 @@ const HeroSection = () => {
         }}
       />
 
-      <div className="container relative z-10 mx-auto flex min-h-[calc(100vh-6rem)] items-center px-4 md:min-h-[calc(100vh-7rem)] md:px-8">
+      <div className="container relative z-10 mx-auto flex items-center px-4 py-8 md:py-0 md:min-h-[calc(100vh-6rem)] md:px-8">
         <div className="grid w-full gap-12 md:grid-cols-[minmax(0,1fr)_minmax(320px,0.95fr)] md:items-center lg:gap-16">
           <div
             className={`z-10 max-w-xl md:-mt-28 lg:-mt-32 transition-all duration-1000 ${
@@ -40,7 +40,7 @@ const HeroSection = () => {
               Dra. Mariana Hassan
             </p>
             <p className="mb-6 font-body text-xs text-muted-foreground">CRM-RJ 52.108898-6</p>
-            <h1 className="mb-6 font-display text-4xl font-normal leading-[1.04] text-foreground md:text-5xl lg:text-6xl">
+            <h1 className="mb-6 font-display text-4xl font-light leading-[1.04] text-foreground md:text-5xl lg:text-6xl">
               Cuidado com <em className="text-gold not-italic">excelência</em> em cirurgia e endoscopia
             </h1>
             <p className="mb-8 font-body text-base leading-relaxed text-muted-foreground md:text-lg">
@@ -66,7 +66,7 @@ const HeroSection = () => {
               </svg>
             </a>
             <p className="mt-4 font-body text-sm text-muted-foreground">
-              Atendimento em <strong className="text-foreground">Rio de Janeiro</strong>
+              Atendimento em <span className="text-foreground">Rio de Janeiro</span>
             </p>
           </div>
 
