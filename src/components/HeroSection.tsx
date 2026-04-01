@@ -29,9 +29,10 @@ const HeroSection = () => {
       />
 
       <div className="container relative z-10 mx-auto flex items-center px-4 py-8 md:py-0 md:min-h-[calc(100vh-6rem)] md:px-8">
-        <div className="grid w-full gap-12 md:grid-cols-[minmax(0,1fr)_minmax(320px,0.95fr)] md:items-center lg:gap-16">
+        <div className="grid w-full gap-8 md:grid-cols-[minmax(0,1fr)_minmax(280px,0.9fr)] md:items-end lg:gap-12">
+          {/* Text content */}
           <div
-            className={`z-10 max-w-xl md:-mt-28 lg:-mt-32 transition-all duration-1000 ${
+            className={`z-10 max-w-xl self-center md:-mt-16 lg:-mt-20 transition-all duration-1000 ${
               isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
             }`}
           >
@@ -70,15 +71,16 @@ const HeroSection = () => {
             </p>
           </div>
 
+          {/* Image */}
           <div
-            className={`relative flex min-h-[20rem] items-end justify-center transition-all duration-1000 delay-300 md:min-h-[38rem] md:justify-end ${
+            className={`relative flex items-end justify-center md:justify-end transition-all duration-1000 delay-300 ${
               isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
             }`}
           >
             <img
               src={marianaHero}
               alt="Dra. Mariana Hassan"
-              className="relative z-10 w-full max-w-[19rem] -translate-y-4 object-contain object-bottom sm:max-w-[22rem] md:max-w-[32rem] md:translate-x-6 md:-translate-y-16 lg:max-w-[36rem] lg:translate-x-8 lg:-translate-y-20"
+              className="relative z-10 w-full max-w-[16rem] object-contain object-bottom sm:max-w-[18rem] md:max-w-[22rem] lg:max-w-[26rem] xl:max-w-[28rem] 2xl:max-w-[30rem]"
             />
           </div>
         </div>
