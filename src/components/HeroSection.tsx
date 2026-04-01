@@ -17,7 +17,7 @@ const HeroSection = () => {
         className="pointer-events-none absolute bottom-20 right-10 h-96 w-96 rounded-full gold-orb"
         style={{ animationDelay: "2s" }}
       />
-      <div className="hero-panel-gradient pointer-events-none absolute inset-y-0 left-[32%] right-0 hidden md:block" />
+      <div className="hero-panel-gradient pointer-events-none absolute inset-y-0 left-[28%] right-0 hidden lg:block xl:left-[24%] 2xl:left-[22%]" />
       <div className="hero-panel-gradient-mobile pointer-events-none absolute inset-x-0 bottom-0 top-[46%] md:hidden" />
 
       <div
@@ -28,11 +28,11 @@ const HeroSection = () => {
         }}
       />
 
-      <div className="container relative z-10 mx-auto px-4 py-8 md:px-8 md:py-0">
-        <div className="grid w-full gap-8 md:min-h-[calc(100svh-6rem)] md:grid-cols-[minmax(0,1fr)_minmax(320px,0.95fr)] md:items-stretch lg:min-h-[calc(100svh-7rem)] lg:gap-12 xl:min-h-[calc(100svh-8rem)]">
+      <div className="relative z-10 mx-auto w-full max-w-[1680px] px-4 py-8 sm:px-6 sm:py-10 md:px-8 md:py-12 lg:px-10 lg:py-0 xl:px-12 2xl:px-16">
+        <div className="grid w-full gap-8 md:gap-10 lg:min-h-[calc(100svh-7rem)] lg:grid-cols-[minmax(0,1.02fr)_minmax(28rem,0.88fr)] lg:items-stretch xl:min-h-[calc(100svh-8rem)] xl:grid-cols-[minmax(0,1fr)_minmax(32rem,0.9fr)] 2xl:gap-16">
           {/* Text content */}
           <div
-            className={`z-10 flex max-w-xl flex-col justify-center md:py-10 lg:py-12 xl:py-16 transition-all duration-1000 ${
+            className={`z-10 flex max-w-xl flex-col justify-center md:mx-auto md:max-w-[44rem] md:py-2 lg:mx-0 lg:max-w-[40rem] lg:py-12 xl:max-w-[44rem] xl:py-16 2xl:max-w-[48rem] transition-all duration-1000 ${
               isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
             }`}
           >
@@ -41,10 +41,10 @@ const HeroSection = () => {
               Dra. Mariana Hassan
             </p>
             <p className="mb-6 font-body text-xs text-muted-foreground">CRM-RJ 52.108898-6</p>
-            <h1 className="mb-6 font-display text-4xl font-light leading-[1.04] text-foreground md:text-5xl lg:text-6xl">
+            <h1 className="mb-6 font-display text-4xl font-light leading-[1.04] text-foreground sm:text-[3.4rem] md:text-[3.8rem] lg:text-[4.55rem] xl:text-[4.95rem] 2xl:text-[5.35rem]">
               Cuidado com <em className="text-gold not-italic">excelência</em> em cirurgia e endoscopia
             </h1>
-            <p className="mb-8 font-body text-base leading-relaxed text-muted-foreground md:text-lg">
+            <p className="mb-8 font-body text-base leading-relaxed text-muted-foreground md:max-w-[40rem] md:text-[1.1rem] lg:text-lg xl:text-xl">
               Cirurgia Geral e Endoscopia Digestiva com atendimento humanizado. Diagnóstico preciso e tratamento
               individualizado.
             </p>
@@ -73,14 +73,14 @@ const HeroSection = () => {
 
           {/* Image */}
           <div
-            className={`relative flex min-h-[22rem] items-end justify-center md:min-h-full md:justify-end md:pl-6 transition-all duration-1000 delay-300 ${
+            className={`relative hidden min-h-[22rem] items-end justify-center lg:flex lg:min-h-full lg:justify-end lg:pl-2 xl:pl-8 2xl:pl-10 transition-all duration-1000 delay-300 ${
               isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
             }`}
           >
             <img
               src={marianaHero}
               alt="Dra. Mariana Hassan"
-              className="relative z-10 w-full max-w-[16rem] object-contain object-bottom sm:max-w-[18rem] md:h-full md:w-auto md:max-w-none md:max-h-[calc(100svh-6rem)] lg:max-h-[calc(100svh-7rem)] xl:max-h-[calc(100svh-8rem)]"
+              className="relative z-10 w-full max-w-[16rem] object-contain object-bottom sm:max-w-[18rem] lg:h-full lg:w-auto lg:max-w-[32rem] lg:max-h-[calc(100svh-8rem)] xl:max-w-[36rem] xl:max-h-[calc(100svh-8.5rem)] 2xl:max-w-[40rem] 2xl:max-h-[56rem]"
             />
           </div>
         </div>
