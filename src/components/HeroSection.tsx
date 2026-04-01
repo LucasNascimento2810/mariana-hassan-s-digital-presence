@@ -10,7 +10,7 @@ const HeroSection = () => {
   return (
     <section
       ref={ref}
-      className="relative min-h-screen overflow-hidden bg-[linear-gradient(180deg,hsl(var(--cream))_0%,hsl(var(--background))_84%)] pt-24 md:pt-28"
+      className="relative overflow-hidden bg-[linear-gradient(180deg,hsl(var(--cream))_0%,hsl(var(--background))_84%)] pt-20 md:pt-24"
     >
       <div className="pointer-events-none absolute left-10 top-20 h-72 w-72 animate-float rounded-full gold-orb" />
       <div
