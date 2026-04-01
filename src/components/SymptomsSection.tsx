@@ -97,10 +97,10 @@ const SymptomsSection = () => {
               </span>
             ))}
           </div>
-          <p className="mx-auto mt-8 max-w-4xl font-display font-light text-3xl leading-tight text-foreground md:text-4xl lg:text-[2.9rem]">
+          <h3 className="mx-auto mt-8 max-w-4xl font-display text-3xl leading-tight text-foreground md:text-4xl">
             Entre as causas mais comuns esta a <em className="text-gold not-italic">colelitiase</em>, conhecida como
             pedra na vesicula.
-          </p>
+          </h3>
         </div>
 
         <div
