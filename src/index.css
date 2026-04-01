@@ -239,6 +239,12 @@ html {
     font-synthesis: none;
   }
 
+  .font-display-light {
+    font-family: var(--font-display);
+    font-weight: 300;
+    font-synthesis: none;
+  }
+
   .hero-panel-gradient {
     background: linear-gradient(
       270deg,

@@ -35,6 +35,8 @@ const Footer = () => {
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-gold/5" />
 
       <div className="container relative z-10 mx-auto px-4 md:px-8">
+        <h2 className="sr-only">Informacoes de contato e localizacao</h2>
+
         <div
           className={`mb-12 grid gap-10 md:grid-cols-2 xl:grid-cols-[1.1fr_1fr_0.9fr_1.05fr] stagger-children ${
             isVisible ? "reveal-visible" : ""
@@ -133,10 +135,10 @@ const Footer = () => {
           </div>
 
           <div className="w-full max-w-[15rem] xl:ml-auto">
-            <p className="mb-3 flex items-center gap-3 font-body text-xs uppercase tracking-[0.3em] text-gold">
+            <h3 className="mb-3 flex items-center gap-3 font-body text-xs uppercase tracking-[0.3em] text-gold">
               <span className="inline-block h-px w-8 bg-gold" />
               Como chegar
-            </p>
+            </h3>
 
             <div className="overflow-hidden rounded-[1.1rem] border border-primary-foreground/10 bg-primary-foreground/5 shadow-elevated">
               <iframe

@@ -62,11 +62,11 @@ const TestimonialsSection = () => {
               </p>
               <div className="flex items-center gap-3">
                 <div className="w-11 h-11 rounded-full bg-gradient-to-br from-gold/20 to-gold/5 flex items-center justify-center border border-gold/15">
-                  <span className="font-display text-sm text-gold font-medium">
+                  <span className="font-display text-sm text-gold">
                     {t.name.charAt(0)}
                   </span>
                 </div>
-                <span className="font-body text-sm font-medium text-foreground">{t.name}</span>
+                <span className="font-body text-sm text-foreground">{t.name}</span>
               </div>
             </div>
           ))}

@@ -71,25 +71,25 @@ const CtaSection = () => {
             </div>
 
             <div
-              className={`relative hidden min-h-[24rem] overflow-hidden bg-[linear-gradient(155deg,hsl(var(--cream))_0%,hsl(var(--gold-light)/0.45)_100%)] lg:block transition-all duration-700 delay-150 ${
+              className={`relative isolate hidden min-h-[24rem] overflow-hidden bg-[linear-gradient(155deg,hsl(var(--cream))_0%,hsl(var(--gold-light)/0.45)_100%)] lg:block transition-all duration-700 delay-150 ${
                 isVisible ? "translate-x-0 opacity-100" : "translate-x-8 opacity-0"
               }`}
             >
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_35%,hsl(var(--gold)/0.18)_0%,transparent_52%)]" />
-              <div className="absolute left-8 top-8 rounded-[1.2rem] bg-white/85 px-5 py-4 shadow-card backdrop-blur-sm">
+              <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_70%_35%,hsl(var(--gold)/0.18)_0%,transparent_52%)]" />
+              <div className="absolute left-8 top-8 z-20 max-w-[12.75rem] rounded-[1.2rem] bg-white/85 px-5 py-4 shadow-card backdrop-blur-sm">
                 <p className="font-body text-[11px] uppercase tracking-[0.28em] text-gold">Consulta medica</p>
-                <p className="mt-2 max-w-[12rem] font-display text-2xl leading-tight text-foreground">
+                <p className="mt-2 max-w-[12rem] font-display-light text-2xl leading-[1.2] tracking-[0.02em] text-foreground">
                   Avaliacao precisa para tratar a causa.
                 </p>
               </div>
-              <div className="absolute bottom-8 left-8 rounded-[1rem] bg-white/85 px-4 py-3 shadow-card backdrop-blur-sm">
+              <div className="absolute bottom-10 left-8 z-20 max-w-[13.5rem] rounded-[1rem] bg-white/85 px-4 py-3 shadow-card backdrop-blur-sm">
                 <p className="font-body text-xs uppercase tracking-[0.24em] text-gold">Rio de Janeiro</p>
                 <p className="mt-1 font-body text-sm text-foreground/75">Atendimento com cuidado e escuta.</p>
               </div>
               <img
                 src={marianaHero}
                 alt="Dra. Mariana Hassan"
-                className="absolute bottom-[-5.5rem] right-[-1.75rem] w-[22rem] max-w-none object-contain object-right-bottom transition-transform duration-700 group-hover:translate-y-[-0.35rem] xl:right-[-0.75rem] xl:w-[24rem]"
+                className="absolute bottom-[-5.5rem] right-[-2.5rem] z-10 w-[21rem] max-w-none object-contain object-right-bottom transition-transform duration-700 group-hover:translate-y-[-0.35rem] xl:right-[-1.25rem] xl:w-[23rem] 2xl:right-[-0.25rem] 2xl:w-[24rem]"
               />
             </div>
           </div>

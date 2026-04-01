@@ -10,7 +10,7 @@ const HeroSection = () => {
   return (
     <section
       ref={ref}
-      className="relative overflow-hidden bg-[linear-gradient(180deg,hsl(var(--cream))_0%,hsl(var(--background))_84%)] pt-20 md:pt-24"
+      className="relative overflow-hidden bg-[linear-gradient(180deg,hsl(var(--cream))_0%,hsl(var(--background))_84%)] pt-20 md:pt-24 lg:pt-28 xl:pt-32"
     >
       <div className="pointer-events-none absolute left-10 top-20 h-72 w-72 animate-float rounded-full gold-orb" />
       <div
@@ -28,11 +28,11 @@ const HeroSection = () => {
         }}
       />
 
-      <div className="container relative z-10 mx-auto flex items-center px-4 py-8 md:py-0 md:min-h-[calc(100vh-6rem)] md:px-8">
-        <div className="grid w-full gap-8 md:grid-cols-[minmax(0,1fr)_minmax(280px,0.9fr)] md:items-end lg:gap-12">
+      <div className="container relative z-10 mx-auto px-4 py-8 md:px-8 md:py-0">
+        <div className="grid w-full gap-8 md:min-h-[calc(100svh-6rem)] md:grid-cols-[minmax(0,1fr)_minmax(320px,0.95fr)] md:items-stretch lg:min-h-[calc(100svh-7rem)] lg:gap-12 xl:min-h-[calc(100svh-8rem)]">
           {/* Text content */}
           <div
-            className={`z-10 max-w-xl self-center md:-mt-16 lg:-mt-20 transition-all duration-1000 ${
+            className={`z-10 flex max-w-xl flex-col justify-center md:py-10 lg:py-12 xl:py-16 transition-all duration-1000 ${
               isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
             }`}
           >
@@ -53,7 +53,7 @@ const HeroSection = () => {
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="group btn-shimmer inline-flex items-center gap-3 rounded-full bg-gold px-8 py-4 font-body text-sm font-medium text-primary-foreground shadow-card transition-all duration-300 hover:scale-[1.03] hover:bg-gold-dark hover:shadow-elevated active:scale-[0.98]"
+              className="group btn-shimmer inline-flex items-center gap-3 rounded-full bg-gold px-8 py-4 font-body text-sm font-normal text-primary-foreground shadow-card transition-all duration-300 hover:scale-[1.03] hover:bg-gold-dark hover:shadow-elevated active:scale-[0.98]"
             >
               AGENDAR CONSULTA COM A DRA.
               <svg
@@ -73,14 +73,14 @@ const HeroSection = () => {
 
           {/* Image */}
           <div
-            className={`relative flex items-end justify-center md:justify-end transition-all duration-1000 delay-300 ${
+            className={`relative flex min-h-[22rem] items-end justify-center md:min-h-full md:justify-end md:pl-6 transition-all duration-1000 delay-300 ${
               isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
             }`}
           >
             <img
               src={marianaHero}
               alt="Dra. Mariana Hassan"
-              className="relative z-10 w-full max-w-[16rem] object-contain object-bottom sm:max-w-[18rem] md:max-w-[22rem] lg:max-w-[26rem] xl:max-w-[28rem] 2xl:max-w-[30rem]"
+              className="relative z-10 w-full max-w-[16rem] object-contain object-bottom sm:max-w-[18rem] md:h-full md:w-auto md:max-w-none md:max-h-[calc(100svh-6rem)] lg:max-h-[calc(100svh-7rem)] xl:max-h-[calc(100svh-8rem)]"
             />
           </div>
         </div>
