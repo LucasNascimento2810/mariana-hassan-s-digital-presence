@@ -28,7 +28,7 @@ const HeroSection = () => {
         }}
       />
 
-      <div className="container relative z-10 mx-auto flex min-h-[calc(100vh-6rem)] items-center px-4 md:min-h-[calc(100vh-7rem)] md:px-8">
+      <div className="container relative z-10 mx-auto flex items-center px-4 py-8 md:py-0 md:min-h-[calc(100vh-6rem)] md:px-8">
         <div className="grid w-full gap-12 md:grid-cols-[minmax(0,1fr)_minmax(320px,0.95fr)] md:items-center lg:gap-16">
           <div
             className={`z-10 max-w-xl md:-mt-28 lg:-mt-32 transition-all duration-1000 ${
