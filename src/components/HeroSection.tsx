@@ -30,7 +30,6 @@ const HeroSection = () => {
 
       <div className="relative z-10 mx-auto w-full max-w-[1680px] px-4 py-8 sm:px-6 sm:py-10 md:px-8 md:py-12 lg:px-10 lg:py-0 xl:px-12 2xl:px-16">
         <div className="grid w-full gap-8 md:gap-10 lg:min-h-[calc(100svh-7rem)] lg:grid-cols-[minmax(0,1.02fr)_minmax(28rem,0.88fr)] lg:items-stretch xl:min-h-[calc(100svh-8rem)] xl:grid-cols-[minmax(0,1fr)_minmax(32rem,0.9fr)] 2xl:gap-16">
-          {/* Text content */}
           <div
             className={`z-10 flex max-w-xl flex-col justify-center md:mx-auto md:max-w-[44rem] md:py-2 lg:mx-0 lg:max-w-[40rem] lg:py-12 xl:max-w-[44rem] xl:py-16 2xl:max-w-[48rem] transition-all duration-1000 ${
               isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
@@ -71,7 +70,6 @@ const HeroSection = () => {
             </p>
           </div>
 
-          {/* Image */}
           <div
             className={`relative hidden min-h-[22rem] items-end justify-center lg:flex lg:min-h-full lg:justify-end lg:pl-2 xl:pl-8 2xl:pl-10 transition-all duration-1000 delay-300 ${
               isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"

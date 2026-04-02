@@ -1,27 +1,32 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
-const WHATSAPP_URL = "https://api.whatsapp.com/send?phone=5521971414321&text=Ol%C3%A1,%20gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Dra.%20Mariana%20Hassan.";
+const WHATSAPP_URL =
+  "https://api.whatsapp.com/send?phone=5521971414321&text=Ol%C3%A1,%20gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Dra.%20Mariana%20Hassan.";
 
 const steps = [
   {
     number: "01",
     title: "Consulta inicial",
-    description: "Discussão dos seus sintomas, histórico médico e preocupações. Analisamos detalhadamente o seu caso e orientamos os próximos passos.",
+    description:
+      "Discussão dos seus sintomas, histórico médico e preocupações. Analisamos detalhadamente o seu caso e orientamos os próximos passos.",
   },
   {
     number: "02",
     title: "Exames diagnósticos",
-    description: "Solicitação de exames complementares como ultrassonografia, exames de sangue, tomografia ou endoscopia para um diagnóstico preciso.",
+    description:
+      "Solicitação de exames complementares, como ultrassonografia, exames de sangue, tomografia ou endoscopia, para um diagnóstico preciso.",
   },
   {
     number: "03",
     title: "Retorno com resultados",
-    description: "Avaliação dos resultados e definição do melhor tratamento — medicação, reeducação alimentar, acompanhamento ou cirurgia.",
+    description:
+      "Avaliação dos resultados e definição do melhor tratamento: medicação, reeducação alimentar, acompanhamento ou cirurgia.",
   },
   {
     number: "04",
     title: "Acompanhamento",
-    description: "Consultas de acompanhamento para monitorar o progresso, ajustar o tratamento e garantir sua recuperação completa.",
+    description:
+      "Consultas de acompanhamento para monitorar o progresso, ajustar o tratamento e garantir sua recuperação completa.",
   },
 ];
 

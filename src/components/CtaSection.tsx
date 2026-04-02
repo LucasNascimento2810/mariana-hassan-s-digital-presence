@@ -5,7 +5,7 @@ const WHATSAPP_URL =
   "https://api.whatsapp.com/send?phone=5521971414321&text=Ol%C3%A1,%20gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Dra.%20Mariana%20Hassan.";
 
 const highlights = [
-  "Investigacao da causa dos sintomas",
+  "Investigação da causa dos sintomas",
   "Atendimento humanizado e criterioso",
   "Tratamento individualizado",
 ];
@@ -25,7 +25,7 @@ const CtaSection = () => {
           }`}
         >
           <div className="h-px w-8 bg-gold" />
-          <span className="font-body text-xs uppercase tracking-[0.3em] text-gold">Alivio dos sintomas</span>
+          <span className="font-body text-xs uppercase tracking-[0.3em] text-gold">Alívio dos sintomas</span>
         </div>
 
         <div
@@ -37,12 +37,12 @@ const CtaSection = () => {
             <div className={`stagger-children px-6 py-8 md:px-10 md:py-12 lg:px-12 lg:py-14 ${isVisible ? "reveal-visible" : ""}`}>
               <div>
                 <h2 className="max-w-3xl font-display text-4xl leading-[1.04] text-foreground md:text-5xl lg:text-[3.8rem]">
-                  Sofrendo com <em className="text-gold not-italic">azia, refluxo e queimacao</em>? Descubra a causa e
+                  Sofrendo com <em className="text-gold not-italic">azia, refluxo e queimação</em>? Descubra a causa e
                   recupere sua qualidade de vida.
                 </h2>
                 <p className="mt-6 max-w-2xl font-body text-base leading-relaxed text-muted-foreground md:text-xl">
-                  Agende sua consulta e de o primeiro passo para o alivio dos sintomas. Nao deixe que essas condicoes
-                  afetem sua rotina diaria.
+                  Agende sua consulta e dê o primeiro passo para o alívio dos sintomas. Não deixe que essas condições
+                  afetem sua rotina diária.
                 </p>
 
                 <div className="mt-7 flex flex-wrap gap-3">
@@ -77,9 +77,9 @@ const CtaSection = () => {
             >
               <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_70%_35%,hsl(var(--gold)/0.18)_0%,transparent_52%)]" />
               <div className="absolute left-8 top-8 z-20 max-w-[12.75rem] rounded-[1.2rem] bg-white/85 px-5 py-4 shadow-card backdrop-blur-sm">
-                <p className="font-body text-[11px] uppercase tracking-[0.28em] text-gold">Consulta medica</p>
+                <p className="font-body text-[11px] uppercase tracking-[0.28em] text-gold">Consulta médica</p>
                 <p className="mt-2 max-w-[12rem] font-display-light text-2xl leading-[1.2] tracking-[0.02em] text-foreground">
-                  Avaliacao precisa para tratar a causa.
+                  Avaliação precisa para tratar a causa.
                 </p>
               </div>
               <div className="absolute bottom-10 left-8 z-20 max-w-[13.5rem] rounded-[1rem] bg-white/85 px-4 py-3 shadow-card backdrop-blur-sm">

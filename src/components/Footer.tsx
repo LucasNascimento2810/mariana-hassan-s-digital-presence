@@ -35,7 +35,7 @@ const Footer = () => {
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-gold/5" />
 
       <div className="container relative z-10 mx-auto px-4 md:px-8">
-        <h2 className="sr-only">Informacoes de contato e localizacao</h2>
+        <h2 className="sr-only">Informações de contato e localização</h2>
 
         <div
           className={`mb-12 grid gap-10 md:grid-cols-2 xl:grid-cols-[1.1fr_1fr_0.9fr_1.05fr] stagger-children ${
@@ -74,7 +74,7 @@ const Footer = () => {
             <div className="group mb-4 flex items-start gap-3">
               <Clock className="mt-1 h-4 w-4 flex-shrink-0 text-gold transition-transform duration-300 group-hover:scale-110" />
               <p className="font-body text-sm text-primary-foreground/70">
-                Segunda a sexta: 9h às 18h
+                Segunda a sexta, das 9h às 18h
               </p>
             </div>
 
@@ -164,8 +164,7 @@ const Footer = () => {
 
         <div className="border-t border-primary-foreground/10 pt-8 text-center">
           <p className="font-body text-xs text-primary-foreground/50">
-            Dra. Mariana Hassan | CRM-RJ 52.108898-6 | © {currentYear} Todos os
-            direitos reservados.
+            Dra. Mariana Hassan | CRM-RJ 52.108898-6 | © {currentYear} Todos os direitos reservados.
           </p>
         </div>
       </div>

@@ -2,7 +2,8 @@ import marianaCasual from "@/assets/mariana-casual.jpeg";
 import marianaPortrait from "@/assets/mariana-portrait.jpg";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
-const WHATSAPP_URL = "https://api.whatsapp.com/send?phone=5521971414321&text=Ol%C3%A1,%20gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Dra.%20Mariana%20Hassan.";
+const WHATSAPP_URL =
+  "https://api.whatsapp.com/send?phone=5521971414321&text=Ol%C3%A1,%20gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Dra.%20Mariana%20Hassan.";
 
 const DoctorSection = () => {
   const { ref, isVisible } = useScrollReveal();
@@ -20,7 +21,6 @@ const DoctorSection = () => {
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
-          {/* Photos */}
           <div className={`grid grid-cols-2 gap-4 transition-all duration-800 delay-200 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"}`}>
             <div className="rounded-2xl overflow-hidden shadow-elevated group">
               <img
@@ -38,24 +38,23 @@ const DoctorSection = () => {
             </div>
           </div>
 
-          {/* Bio */}
           <div className={`transition-all duration-800 delay-300 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-foreground mb-6 leading-tight">
               Um pouco sobre minha <em className="text-gold not-italic">história</em>
             </h2>
             <p className="font-body text-base text-muted-foreground leading-relaxed mb-4">
-              Sou a Dra. Mariana Hassan, médica formada na Faculdade Técnico Educacional Souza Marques – FTESM, no Rio de Janeiro. Sou cirurgiã geral com especialização em videocirurgia, endoscopia digestiva e colonoscopia.
+              Sou a Dra. Mariana Hassan, médica formada na Faculdade Técnico Educacional Souza Marques - FTESM, no Rio de Janeiro. Sou cirurgiã geral, com especialização em videocirurgia, endoscopia digestiva e colonoscopia.
             </p>
             <p className="font-body text-base text-muted-foreground leading-relaxed mb-6">
-              Realizei Residência em Cirurgia Geral no Hospital das Clínicas de Teresópolis e Residência em Endoscopia Digestiva na UNIRIO. Acredito na importância de estabelecer uma relação de confiança, fornecendo atendimento personalizado e dedicado.
+              Realizei residência em Cirurgia Geral no Hospital das Clínicas de Teresópolis e residência em Endoscopia Digestiva na UNIRIO. Acredito na importância de estabelecer uma relação de confiança, oferecendo atendimento personalizado e dedicado.
             </p>
 
             <ul className="space-y-3 mb-8">
               {[
-                "Cirurgiã Geral e Endoscopista",
+                "Cirurgiã geral e endoscopista",
                 "CRM-RJ 52.108898-6",
-                "Residência em Cirurgia Geral – HCT-CO",
-                "Residência em Endoscopia Digestiva – UNIRIO",
+                "Residência em Cirurgia Geral - HCT-CO",
+                "Residência em Endoscopia Digestiva - UNIRIO",
               ].map((item, i) => (
                 <li key={i} className="flex items-center gap-3 font-body text-sm text-foreground group">
                   <div className="w-2 h-2 rounded-full bg-gold flex-shrink-0 group-hover:scale-150 transition-transform duration-300" />

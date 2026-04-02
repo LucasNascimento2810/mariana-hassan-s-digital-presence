@@ -4,35 +4,35 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 const symptomCards = [
   {
     icon: CircleAlert,
-    text: "Se voce esta sentindo dor abdominal recorrente.",
+    text: "Se você está sentindo dor abdominal recorrente.",
   },
   {
     icon: Utensils,
-    text: "Se sente nauseas ou desconforto depois das refeicoes.",
+    text: "Se sente náuseas ou desconforto depois das refeições.",
   },
   {
     icon: Flame,
-    text: "Se sofre com estufamento, indigestao e azia frequente.",
+    text: "Se sofre com estufamento, indigestão e azia frequente.",
   },
   {
     icon: Activity,
-    text: "Se tem disturbios digestivos, como gases ou diarreia.",
+    text: "Se tem distúrbios digestivos, como gases ou diarreia.",
   },
 ];
 
 const commonCauses = [
-  "Intolerancia alimentar",
+  "Intolerância alimentar",
   "Refluxo",
   "Gastrite",
-  "Ulcera gastrica",
-  "Uso de remedios",
-  "Colelitiase",
+  "Úlcera gástrica",
+  "Uso de remédios",
+  "Colelitíase",
 ];
 
 const diagnosisSteps = [
-  "Avaliacao clinica detalhada e historico dos sintomas.",
-  "Exames diagnosticos para diferenciar a causa com precisao.",
-  "Definicao do tratamento mais adequado para o seu caso.",
+  "Avaliação clínica detalhada e histórico dos sintomas.",
+  "Exames diagnósticos para diferenciar a causa com precisão.",
+  "Definição do tratamento mais adequado para o seu caso.",
 ];
 
 const SymptomsSection = () => {
@@ -50,7 +50,7 @@ const SymptomsSection = () => {
           }`}
         >
           <div className="h-px w-8 bg-gold" />
-          <span className="font-body text-xs uppercase tracking-[0.3em] text-gold">Sintomas sem diagnostico</span>
+          <span className="font-body text-xs uppercase tracking-[0.3em] text-gold">Sintomas sem diagnóstico</span>
           <div className="h-px w-8 bg-gold" />
         </div>
 
@@ -60,12 +60,12 @@ const SymptomsSection = () => {
           }`}
         >
           <h2 className="font-display text-3xl leading-tight text-foreground md:text-4xl lg:text-5xl">
-            Voce esta sofrendo com sintomas como <em className="text-gold not-italic">azia, refluxo e queimacao</em>,
-            mas ainda nao tem um diagnostico definido?
+            Você está sofrendo com sintomas como <em className="text-gold not-italic">azia, refluxo e queimação</em>,
+            mas ainda não tem um diagnóstico definido?
           </h2>
           <p className="mx-auto mt-6 max-w-4xl font-body text-base leading-relaxed text-muted-foreground md:text-xl">
-            Essas sao condicoes bastante comuns e que afetam muitas pessoas. Recebo varios pacientes que se queixam
-            dessa sensacao e ainda nao sabem qual e a verdadeira causa.
+            Essas são condições bastante comuns e afetam muitas pessoas. Recebo vários pacientes que se queixam dessa
+            sensação e ainda não sabem qual é a verdadeira causa.
           </p>
         </div>
 
@@ -98,8 +98,8 @@ const SymptomsSection = () => {
             ))}
           </div>
           <p className="mx-auto mt-8 max-w-4xl font-display-light text-3xl leading-[1.2] tracking-[0.02em] text-foreground md:text-4xl">
-            Entre as causas mais comuns esta a <em className="text-gold not-italic">colelitiase</em>, conhecida como
-            pedra na vesicula.
+            Entre as causas mais comuns está a <em className="text-gold not-italic">colelitíase</em>, conhecida como
+            pedra na vesícula.
           </p>
         </div>
 
@@ -114,20 +114,20 @@ const SymptomsSection = () => {
               Como identificar
             </p>
             <h3 className="font-display text-3xl leading-tight text-foreground md:text-4xl">
-              Como identificar e encontrar o diagnostico correto.
+              Como identificar e encontrar o diagnóstico correto
             </h3>
             <p className="mt-5 font-body text-base leading-relaxed text-muted-foreground md:text-lg">
-              O primeiro passo e buscar uma avaliacao criteriosa. A diferenciacao entre pedra na vesicula e outras
-              doencas geralmente e feita por meio de exames diagnosticos e pela analise detalhada do quadro clinico.
+              O primeiro passo é buscar uma avaliação criteriosa. A diferenciação entre pedra na vesícula e outras
+              doenças geralmente é feita por meio de exames diagnósticos e da análise detalhada do quadro clínico.
             </p>
             <p className="mt-4 font-body text-base leading-relaxed text-muted-foreground md:text-lg">
-              Com um bom acompanhamento medico, voce recebe um diagnostico correto e o tratamento adequado para resolver
-              o problema com mais seguranca.
+              Com um bom acompanhamento médico, você recebe o diagnóstico correto e o tratamento adequado para resolver
+              o problema com mais segurança.
             </p>
           </div>
 
           <div className="rounded-[1.8rem] border border-gold/12 bg-white/90 p-6 shadow-card">
-            <p className="font-body text-xs uppercase tracking-[0.3em] text-gold">Etapas da avaliacao</p>
+            <p className="font-body text-xs uppercase tracking-[0.3em] text-gold">Etapas da avaliação</p>
             <div className="mt-6 space-y-4">
               {diagnosisSteps.map((step, index) => (
                 <div key={step} className="flex items-start gap-4">

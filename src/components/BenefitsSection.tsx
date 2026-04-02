@@ -2,9 +2,9 @@ import { CheckCircle } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const benefits = [
-  { title: "Menor risco de infecção", description: "Incisões pequenas com menos exposição a bactérias." },
+  { title: "Menor risco de infecção", description: "Incisões pequenas, com menos exposição a bactérias." },
   { title: "Recuperação mais rápida", description: "Retorno às atividades diárias em um período mais curto." },
-  { title: "Menor dor pós-operatória", description: "Menos dor e recuperação mais confortável." },
+  { title: "Menor dor pós-operatória", description: "Menos dor e uma recuperação mais confortável." },
   { title: "Menor trauma tecidual", description: "Menos cicatrizes e menor impacto estético." },
   { title: "Maior precisão", description: "Câmera de vídeo com visão ampliada e detalhada." },
   { title: "Cuidado centrado no paciente", description: "Atendimento humanizado e personalizado em cada etapa." },

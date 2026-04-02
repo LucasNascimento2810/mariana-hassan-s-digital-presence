@@ -4,20 +4,20 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const treatments = [
   {
-    category: "Sintomas Digestivos",
+    category: "Sintomas digestivos",
     items: [
       {
-        title: "Azia e Refluxo",
+        title: "Azia e refluxo",
         description:
           "Avaliação detalhada das causas de azia, queimação e refluxo gastroesofágico para definição do melhor tratamento.",
       },
       {
-        title: "Dor Abdominal",
+        title: "Dor abdominal",
         description:
-          "Investigação criteriosa de dores abdominais recorrentes com exames precisos para diagnóstico correto.",
+          "Investigação criteriosa de dores abdominais recorrentes com exames precisos para um diagnóstico correto.",
       },
       {
-        title: "Distúrbios Digestivos",
+        title: "Distúrbios digestivos",
         description:
           "Tratamento de indigestão, gases, náuseas e diarreia com abordagem individualizada.",
       },
@@ -27,9 +27,9 @@ const treatments = [
     category: "Procedimentos",
     items: [
       {
-        title: "Endoscopia Digestiva",
+        title: "Endoscopia digestiva",
         description:
-          "Exame para avaliação do esôfago, estômago e duodeno, essencial para diagnóstico de diversas condições.",
+          "Exame para avaliação do esôfago, estômago e duodeno, essencial para o diagnóstico de diversas condições.",
       },
       {
         title: "Colonoscopia",
@@ -47,9 +47,9 @@ const treatments = [
     category: "Cirurgias",
     items: [
       {
-        title: "Vesícula Biliar",
+        title: "Vesícula biliar",
         description:
-          "Tratamento cirúrgico por videolaparoscopia para colelitíase (pedra na vesícula) com recuperação rápida.",
+          "Tratamento cirúrgico por videolaparoscopia para colelitíase (pedra na vesícula), com recuperação rápida.",
       },
       {
         title: "Hérnia",
@@ -57,9 +57,9 @@ const treatments = [
           "Correção cirúrgica de hérnias inguinais, umbilicais e abdominais com técnicas minimamente invasivas.",
       },
       {
-        title: "Cirurgia Geral",
+        title: "Cirurgia geral",
         description:
-          "Procedimentos cirúrgicos diversos com foco em segurança, técnica aprimorada e cuidado ao paciente.",
+          "Procedimentos cirúrgicos diversos com foco em segurança, técnica aprimorada e cuidado com o paciente.",
       },
     ],
   },
@@ -87,7 +87,7 @@ const TreatmentsSection = () => {
         >
           <div className="h-px w-8 bg-gold" />
           <span className="font-body text-xs uppercase tracking-[0.3em] text-gold">
-            Conheça os nossos tratamentos
+            Conheça nossos tratamentos
           </span>
         </div>
 
@@ -97,8 +97,7 @@ const TreatmentsSection = () => {
           }`}
         >
           <h2 className="max-w-2xl font-display text-3xl leading-tight text-foreground md:text-4xl lg:text-5xl">
-            <em className="not-italic text-gold">Tratamentos especializados</em>, definidos após avaliação
-            médica.
+            <em className="not-italic text-gold">Tratamentos especializados</em>, definidos após avaliação médica.
           </h2>
           <div className="hidden gap-2 md:flex">
             <button
