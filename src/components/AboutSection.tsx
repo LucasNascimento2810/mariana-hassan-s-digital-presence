@@ -1,4 +1,4 @@
-import marianaOffice from "@/assets/mariana-office.jpg";
+import marianaOffice from "@/assets/mariana-office.webp";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const WHATSAPP_URL =
@@ -51,6 +51,10 @@ const AboutSection = () => {
               <img
                 src={marianaOffice}
                 alt="Dra. Mariana Hassan no consultório"
+                width="1280"
+                height="853"
+                loading="lazy"
+                decoding="async"
                 className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
               />
             </div>

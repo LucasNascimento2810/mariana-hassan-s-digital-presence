@@ -1,5 +1,5 @@
-import marianaCasual from "@/assets/mariana-casual.jpeg";
-import marianaPortrait from "@/assets/mariana-portrait.jpg";
+import marianaCasual from "@/assets/mariana-casual.webp";
+import marianaPortrait from "@/assets/mariana-portrait.webp";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const WHATSAPP_URL =
@@ -26,6 +26,10 @@ const DoctorSection = () => {
               <img
                 src={marianaCasual}
                 alt="Dra. Mariana Hassan"
+                width="800"
+                height="1201"
+                loading="lazy"
+                decoding="async"
                 className="w-full h-80 object-cover object-top transition-transform duration-700 group-hover:scale-110"
               />
             </div>
@@ -33,6 +37,10 @@ const DoctorSection = () => {
               <img
                 src={marianaPortrait}
                 alt="Dra. Mariana Hassan"
+                width="640"
+                height="930"
+                loading="lazy"
+                decoding="async"
                 className="w-full h-80 object-cover object-top transition-transform duration-700 group-hover:scale-110"
               />
             </div>

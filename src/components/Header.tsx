@@ -35,6 +35,9 @@ const Header = () => {
             <img
               src={logoGold}
               alt="Dra. Mariana Hassan"
+              width="1920"
+              height="1165"
+              decoding="async"
               className={`w-auto transition-all duration-500 ${scrolled ? "h-12 md:h-16" : "h-16 md:h-24"}`}
             />
           </a>

@@ -1,4 +1,4 @@
-import marianaHero from "@/assets/mariana-hero.png";
+import marianaHero from "@/assets/mariana-hero.webp";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const WHATSAPP_URL =
@@ -78,6 +78,11 @@ const HeroSection = () => {
             <img
               src={marianaHero}
               alt="Dra. Mariana Hassan"
+              width="660"
+              height="1015"
+              decoding="async"
+              fetchPriority="high"
+              loading="eager"
               className="relative z-10 w-full max-w-[16rem] object-contain object-bottom sm:max-w-[18rem] lg:h-full lg:w-auto lg:max-w-[32rem] lg:max-h-[calc(100svh-8rem)] xl:max-w-[36rem] xl:max-h-[calc(100svh-8.5rem)] 2xl:max-w-[40rem] 2xl:max-h-[56rem]"
             />
           </div>

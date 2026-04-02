@@ -46,6 +46,10 @@ const Footer = () => {
             <img
               src={logoGold}
               alt="Dra. Mariana Hassan"
+              width="1920"
+              height="1165"
+              loading="lazy"
+              decoding="async"
               className="mb-6 h-20 w-auto brightness-150 md:h-24"
             />
 
