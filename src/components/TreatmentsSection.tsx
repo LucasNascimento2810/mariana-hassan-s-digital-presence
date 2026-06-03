@@ -1,82 +1,31 @@
-import { useState } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import exameColonoscopia from "@/assets/mari-hassan/exame-colonoscopia.jpg";
+import exameEndoscopia from "@/assets/mari-hassan/exame-endoscopia.jpg";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
-const treatments = [
+const exams = [
   {
-    category: "Sintomas digestivos",
-    items: [
-      {
-        title: "Azia e refluxo",
-        description:
-          "Avaliação detalhada das causas de azia, queimação e refluxo gastroesofágico para definição do melhor tratamento.",
-      },
-      {
-        title: "Dor abdominal",
-        description:
-          "Investigação criteriosa de dores abdominais recorrentes com exames precisos para um diagnóstico correto.",
-      },
-      {
-        title: "Distúrbios digestivos",
-        description:
-          "Tratamento de indigestão, gases, náuseas e diarreia com abordagem individualizada.",
-      },
+    image: exameEndoscopia,
+    title: "Endoscopia: seu corpo dá sinais, escute",
+    description: [
+      "Azia frequente, dor no estômago, empachamento, dificuldade para engolir... Isso não é 'normal'.",
+      "A endoscopia digestiva alta permite enxergar o que está acontecendo por dentro e identificar problemas como gastrite, refluxo e lesões precoces. Quanto antes investigar, mais simples é tratar. Não ignore os sinais. Seu corpo está avisando.",
     ],
   },
   {
-    category: "Procedimentos",
-    items: [
-      {
-        title: "Endoscopia digestiva",
-        description:
-          "Exame para avaliação do esôfago, estômago e duodeno, essencial para o diagnóstico de diversas condições.",
-      },
-      {
-        title: "Colonoscopia",
-        description:
-          "Exame do intestino grosso para rastreamento e diagnóstico de doenças intestinais.",
-      },
-      {
-        title: "Videolaparoscopia",
-        description:
-          "Cirurgia minimamente invasiva com menor dor, recuperação mais rápida e menor risco de infecção.",
-      },
-    ],
-  },
-  {
-    category: "Cirurgias",
-    items: [
-      {
-        title: "Vesícula biliar",
-        description:
-          "Tratamento cirúrgico por videolaparoscopia para colelitíase (pedra na vesícula), com recuperação rápida.",
-      },
-      {
-        title: "Hérnia",
-        description:
-          "Correção cirúrgica de hérnias inguinais, umbilicais e abdominais com técnicas minimamente invasivas.",
-      },
-      {
-        title: "Cirurgia geral",
-        description:
-          "Procedimentos cirúrgicos diversos com foco em segurança, técnica aprimorada e cuidado com o paciente.",
-      },
+    image: exameColonoscopia,
+    title: "Colonoscopia: prevenir é melhor do que tratar",
+    description: [
+      "O câncer de intestino, na maioria das vezes, começa silencioso. A colonoscopia permite identificar e remover pólipos antes que se tornem câncer.",
+      "Por isso, é indicada a partir dos 45 anos, mesmo sem sintomas. Esperar sinais pode ser tarde. Prevenir é o que realmente salva vidas.",
     ],
   },
 ];
 
 const TreatmentsSection = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
   const { ref, isVisible } = useScrollReveal();
 
-  const next = () => setActiveIndex((i) => (i + 1) % treatments.length);
-  const prev = () => setActiveIndex((i) => (i - 1 + treatments.length) % treatments.length);
-
   return (
-    <section
-      id="tratamentos"
-      className="relative overflow-hidden bg-cream py-20 scroll-mt-24 md:py-28 md:scroll-mt-28"
-    >
+    <section id="exames" className="relative scroll-mt-24 overflow-hidden bg-cream py-20 md:scroll-mt-28 md:py-28">
       <div className="gold-orb pointer-events-none absolute -left-32 top-20 h-64 w-64 rounded-full" />
 
       <div ref={ref} className="container relative z-10 mx-auto px-4 md:px-8">
@@ -86,90 +35,54 @@ const TreatmentsSection = () => {
           }`}
         >
           <div className="h-px w-8 bg-gold" />
-          <span className="font-body text-xs uppercase tracking-[0.3em] text-gold">
-            Conheça nossos tratamentos
-          </span>
+          <span className="font-body text-xs uppercase tracking-[0.3em] text-gold">Exames</span>
         </div>
 
         <div
-          className={`mb-12 flex items-end justify-between transition-all duration-700 delay-100 ${
+          className={`mb-12 max-w-3xl transition-all delay-100 duration-700 ${
             isVisible ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
           }`}
         >
-          <h2 className="max-w-2xl font-display text-3xl leading-tight text-foreground md:text-4xl lg:text-5xl">
-            <em className="not-italic text-gold">Tratamentos especializados</em>, definidos após avaliação médica.
+          <h2 className="font-display text-3xl leading-tight text-foreground md:text-4xl lg:text-5xl">
+            Diagnóstico preciso para cuidar da sua saúde digestiva com antecedência.
           </h2>
-          <div className="hidden gap-2 md:flex">
-            <button
-              onClick={prev}
-              aria-label="Mostrar tratamentos anteriores"
-              className="flex h-12 w-12 items-center justify-center rounded-full border border-border text-foreground transition-all duration-300 hover:scale-110 hover:border-gold hover:bg-gold hover:text-primary-foreground active:scale-95"
-            >
-              <ChevronLeft className="h-5 w-5" />
-            </button>
-            <button
-              onClick={next}
-              aria-label="Mostrar próximos tratamentos"
-              className="flex h-12 w-12 items-center justify-center rounded-full border border-border text-foreground transition-all duration-300 hover:scale-110 hover:border-gold hover:bg-gold hover:text-primary-foreground active:scale-95"
-            >
-              <ChevronRight className="h-5 w-5" />
-            </button>
-          </div>
         </div>
 
-        <div className={`grid gap-6 md:grid-cols-3 stagger-children ${isVisible ? "reveal-visible" : ""}`}>
-          {treatments[activeIndex].items.map((item, idx) => (
-            <div
-              key={`${activeIndex}-${idx}`}
-              className="group rounded-2xl border border-transparent bg-card p-8 shadow-card transition-all duration-500 hover:-translate-y-2 hover:border-gold/10 hover:shadow-elevated"
+        <div className={`grid gap-8 lg:grid-cols-2 stagger-children ${isVisible ? "reveal-visible" : ""}`}>
+          {exams.map((exam) => (
+            <article
+              key={exam.title}
+              className="group overflow-hidden rounded-2xl border border-transparent bg-card shadow-card transition-all duration-500 hover:-translate-y-2 hover:border-gold/10 hover:shadow-elevated"
             >
-              <div className="mb-6 flex items-center gap-3">
-                <span className="h-px w-10 bg-gold/70 transition-all duration-300 group-hover:w-14 group-hover:bg-gold" />
-                <span className="font-body text-[11px] uppercase tracking-[0.28em] text-gold/80">
-                  {String(idx + 1).padStart(2, "0")}
-                </span>
+              <div className="aspect-[4/3] overflow-hidden bg-background">
+                <img
+                  src={exam.image}
+                  alt={exam.title}
+                  width="900"
+                  height="675"
+                  loading="lazy"
+                  decoding="async"
+                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
               </div>
-              <h3 className="mb-3 font-display text-xl text-foreground transition-colors duration-300 group-hover:text-gold">
-                {item.title}
-              </h3>
-              <p className="font-body text-sm leading-relaxed text-muted-foreground">{item.description}</p>
-            </div>
+              <div className="p-7 md:p-8">
+                <div className="mb-5 flex items-center gap-3">
+                  <span className="h-px w-10 bg-gold/70 transition-all duration-300 group-hover:w-14 group-hover:bg-gold" />
+                  <span className="font-body text-[11px] uppercase tracking-[0.28em] text-gold/80">Prevenção</span>
+                </div>
+                <h3 className="mb-4 font-display text-2xl leading-tight text-foreground transition-colors duration-300 group-hover:text-gold md:text-3xl">
+                  {exam.title}
+                </h3>
+                <div className="space-y-4">
+                  {exam.description.map((paragraph) => (
+                    <p key={paragraph} className="font-body text-sm leading-relaxed text-muted-foreground md:text-base">
+                      {paragraph}
+                    </p>
+                  ))}
+                </div>
+              </div>
+            </article>
           ))}
-        </div>
-
-        <div className="mt-8 flex items-center justify-center gap-3">
-          {treatments.map((t, idx) => (
-            <button
-              key={idx}
-              onClick={() => setActiveIndex(idx)}
-              aria-label={`Mostrar categoria ${t.category}`}
-              aria-pressed={idx === activeIndex}
-              className={`rounded-full px-5 py-2.5 font-body text-xs tracking-wider transition-all duration-300 ${
-                idx === activeIndex
-                  ? "scale-105 bg-gold text-primary-foreground shadow-card"
-                  : "bg-background text-muted-foreground hover:bg-background/80 hover:text-foreground"
-              }`}
-            >
-              {t.category}
-            </button>
-          ))}
-        </div>
-
-        <div className="mt-6 flex justify-center gap-2 md:hidden">
-          <button
-            onClick={prev}
-            aria-label="Mostrar tratamentos anteriores"
-            className="flex h-10 w-10 items-center justify-center rounded-full border border-border transition-all hover:bg-gold hover:text-primary-foreground"
-          >
-            <ChevronLeft className="h-4 w-4" />
-          </button>
-          <button
-            onClick={next}
-            aria-label="Mostrar próximos tratamentos"
-            className="flex h-10 w-10 items-center justify-center rounded-full border border-border transition-all hover:bg-gold hover:text-primary-foreground"
-          >
-            <ChevronRight className="h-4 w-4" />
-          </button>
         </div>
       </div>
     </section>

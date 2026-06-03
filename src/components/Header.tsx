@@ -7,10 +7,9 @@ const WHATSAPP_URL =
 
 const navLinks = [
   { label: "Sobre", href: "#sobre" },
-  { label: "Tratamentos", href: "#tratamentos" },
+  { label: "Exames", href: "#exames" },
   { label: "Dra. Mariana", href: "#dra-mariana" },
   { label: "Depoimentos", href: "#depoimentos" },
-  { label: "FAQ", href: "#faq" },
 ];
 
 const Header = () => {

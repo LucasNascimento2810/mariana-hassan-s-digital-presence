@@ -1,71 +1,92 @@
-import marianaCasual from "@/assets/mariana-casual.webp";
-import marianaPortrait from "@/assets/mariana-portrait.webp";
+import draMarianaHistoria from "@/assets/mari-hassan/dra-mariana-historia.jpg";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const WHATSAPP_URL =
   "https://api.whatsapp.com/send?phone=5521971414321&text=Ol%C3%A1,%20gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Dra.%20Mariana%20Hassan.";
 
+const metrics = [
+  { value: "+500", label: "Exames" },
+  { value: "+100", label: "Cirurgias" },
+  { value: "+10", label: "Anos atuação" },
+];
+
 const DoctorSection = () => {
   const { ref, isVisible } = useScrollReveal();
 
   return (
-    <section id="dra-mariana" className="scroll-mt-24 md:scroll-mt-28 py-20 md:py-28 bg-cream relative overflow-hidden">
-      <div className="absolute -right-20 bottom-0 w-80 h-80 gold-orb rounded-full pointer-events-none" />
+    <section id="dra-mariana" className="relative scroll-mt-24 overflow-hidden bg-cream py-20 md:scroll-mt-28 md:py-28">
+      <div className="gold-orb pointer-events-none absolute -right-20 bottom-0 h-80 w-80 rounded-full" />
 
-      <div ref={ref} className="container mx-auto px-4 md:px-8 relative z-10">
-        <div className={`flex items-center gap-3 mb-6 transition-all duration-700 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-6"}`}>
-          <div className="w-8 h-px bg-gold" />
-          <span className="font-body text-xs tracking-[0.3em] uppercase text-gold">
-            Conheça a Dra. Mariana
-          </span>
+      <div ref={ref} className="container relative z-10 mx-auto px-4 md:px-8">
+        <div
+          className={`mb-6 flex items-center gap-3 transition-all duration-700 ${
+            isVisible ? "translate-x-0 opacity-100" : "-translate-x-6 opacity-0"
+          }`}
+        >
+          <div className="h-px w-8 bg-gold" />
+          <span className="font-body text-xs uppercase tracking-[0.3em] text-gold">Conheça a Dra. Mariana</span>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
-          <div className={`grid grid-cols-2 gap-4 transition-all duration-800 delay-200 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"}`}>
-            <div className="rounded-2xl overflow-hidden shadow-elevated group">
-              <img
-                src={marianaCasual}
-                alt="Dra. Mariana Hassan"
-                width="800"
-                height="1201"
-                loading="lazy"
-                decoding="async"
-                className="w-full h-80 object-cover object-top transition-transform duration-700 group-hover:scale-110"
-              />
-            </div>
-            <div className="rounded-2xl overflow-hidden shadow-elevated mt-8 group">
-              <img
-                src={marianaPortrait}
-                alt="Dra. Mariana Hassan"
-                width="640"
-                height="930"
-                loading="lazy"
-                decoding="async"
-                className="w-full h-80 object-cover object-top transition-transform duration-700 group-hover:scale-110"
-              />
+        <div className="grid items-center gap-12 md:grid-cols-2 md:gap-20">
+          <div
+            className={`transition-all delay-200 duration-800 ${
+              isVisible ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"
+            }`}
+          >
+            <div className="relative">
+              <div className="pointer-events-none absolute -inset-3 rounded-3xl border border-gold/15" />
+              <div className="group overflow-hidden rounded-2xl shadow-elevated">
+                <img
+                  src={draMarianaHistoria}
+                  alt="Dra. Mariana Hassan"
+                  width="900"
+                  height="1200"
+                  loading="lazy"
+                  decoding="async"
+                  className="h-[32rem] w-full object-cover object-top transition-transform duration-700 group-hover:scale-105 md:h-[38rem]"
+                />
+              </div>
             </div>
           </div>
 
-          <div className={`transition-all duration-800 delay-300 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
-            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-foreground mb-6 leading-tight">
-              Um pouco sobre minha <em className="text-gold not-italic">história</em>
+          <div
+            className={`transition-all delay-300 duration-800 ${
+              isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+            }`}
+          >
+            <h2 className="mb-6 font-display text-3xl leading-tight text-foreground md:text-4xl lg:text-5xl">
+              Um pouco sobre minha <em className="not-italic text-gold">história</em>
             </h2>
-            <p className="font-body text-base text-muted-foreground leading-relaxed mb-4">
-              Sou a Dra. Mariana Hassan, médica formada na Faculdade Técnico Educacional Souza Marques - FTESM, no Rio de Janeiro. Sou cirurgiã geral, com especialização em videocirurgia, endoscopia digestiva e colonoscopia.
+            <p className="mb-4 font-body text-base leading-relaxed text-muted-foreground">
+              Sou a Dra. Mariana Hassan, médica formada na Faculdade Técnico Educacional Souza Marques - FTESM, no Rio
+              de Janeiro. Sou cirurgiã geral, com especialização em videocirurgia, endoscopia digestiva e colonoscopia.
             </p>
-            <p className="font-body text-base text-muted-foreground leading-relaxed mb-6">
-              Realizei residência em Cirurgia Geral no Hospital das Clínicas de Teresópolis e residência em Endoscopia Digestiva na UNIRIO. Acredito na importância de estabelecer uma relação de confiança, oferecendo atendimento personalizado e dedicado.
+            <p className="mb-8 font-body text-base leading-relaxed text-muted-foreground">
+              Realizei residência em Cirurgia Geral no Hospital das Clínicas de Teresópolis e residência em Endoscopia
+              Digestiva na UNIRIO. Acredito na importância de estabelecer uma relação de confiança, oferecendo
+              atendimento personalizado e dedicado.
             </p>
 
-            <ul className="space-y-3 mb-8">
+            <div className="mb-8 grid grid-cols-3 overflow-hidden rounded-2xl border border-gold/15 bg-background/70 shadow-card backdrop-blur-sm">
+              {metrics.map((metric) => (
+                <div key={metric.label} className="border-r border-gold/10 px-3 py-5 text-center last:border-r-0 md:px-5">
+                  <div className="font-display text-3xl leading-none text-gold md:text-4xl">{metric.value}</div>
+                  <div className="mt-2 font-body text-[11px] uppercase tracking-[0.18em] text-muted-foreground md:text-xs">
+                    {metric.label}
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <ul className="mb-8 space-y-3">
               {[
                 "Cirurgiã geral e endoscopista",
                 "CRM-RJ 52.108898-6",
                 "Residência em Cirurgia Geral - HCT-CO",
                 "Residência em Endoscopia Digestiva - UNIRIO",
-              ].map((item, i) => (
-                <li key={i} className="flex items-center gap-3 font-body text-sm text-foreground group">
-                  <div className="w-2 h-2 rounded-full bg-gold flex-shrink-0 group-hover:scale-150 transition-transform duration-300" />
+              ].map((item) => (
+                <li key={item} className="group flex items-center gap-3 font-body text-sm text-foreground">
+                  <div className="h-2 w-2 flex-shrink-0 rounded-full bg-gold transition-transform duration-300 group-hover:scale-150" />
                   {item}
                 </li>
               ))}
@@ -75,10 +96,10 @@ const DoctorSection = () => {
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-shimmer inline-flex items-center gap-3 bg-gold hover:bg-gold-dark text-primary-foreground font-body font-normal text-sm px-8 py-4 rounded-full transition-all duration-300 shadow-card hover:shadow-elevated hover:scale-[1.03] active:scale-[0.98]"
+              className="btn-shimmer inline-flex items-center gap-3 rounded-full bg-gold px-8 py-4 font-body text-sm font-normal text-primary-foreground shadow-card transition-all duration-300 hover:scale-[1.03] hover:bg-gold-dark hover:shadow-elevated active:scale-[0.98]"
             >
               AGENDAR CONSULTA COM A DRA.
-              <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M5 12h14M12 5l7 7-7 7" />
               </svg>
             </a>

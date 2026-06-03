@@ -34,48 +34,58 @@ const DiagnosticSection = () => {
   const { ref, isVisible } = useScrollReveal();
 
   return (
-    <section id="diagnostico" className="scroll-mt-24 md:scroll-mt-28 py-20 md:py-28 bg-background relative overflow-hidden">
-      <div className="absolute left-1/2 -translate-x-1/2 top-0 w-[600px] h-[600px] gold-orb rounded-full pointer-events-none opacity-50" />
+    <section id="diagnostico" className="relative scroll-mt-24 overflow-hidden bg-background py-20 md:scroll-mt-28 md:py-28">
+      <div className="gold-orb pointer-events-none absolute left-1/2 top-0 h-[600px] w-[600px] -translate-x-1/2 rounded-full opacity-50" />
 
-      <div ref={ref} className="container mx-auto px-4 md:px-8 relative z-10">
-        <div className={`flex items-center gap-3 mb-6 transition-all duration-700 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-6"}`}>
-          <div className="w-8 h-px bg-gold" />
-          <span className="font-body text-xs tracking-[0.3em] uppercase text-gold">
-            Como funciona
-          </span>
+      <div ref={ref} className="container relative z-10 mx-auto px-4 md:px-8">
+        <div
+          className={`mb-6 flex items-center gap-3 transition-all duration-700 ${
+            isVisible ? "translate-x-0 opacity-100" : "-translate-x-6 opacity-0"
+          }`}
+        >
+          <div className="h-px w-8 bg-gold" />
+          <span className="font-body text-xs uppercase tracking-[0.3em] text-gold">Como funciona</span>
         </div>
 
-        <h2 className={`font-display text-3xl md:text-4xl lg:text-5xl text-foreground mb-16 max-w-2xl leading-tight transition-all duration-700 delay-100 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}>
-          Do diagnóstico ao <em className="text-gold not-italic">tratamento</em>
+        <h2
+          className={`mb-16 max-w-2xl font-display text-3xl leading-tight text-foreground transition-all delay-100 duration-700 md:text-4xl lg:text-5xl ${
+            isVisible ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
+          }`}
+        >
+          Do diagnóstico ao <em className="not-italic text-gold">tratamento</em>
         </h2>
 
-        <div className={`grid md:grid-cols-4 gap-8 stagger-children ${isVisible ? "reveal-visible" : ""}`}>
+        <div className={`grid gap-8 md:grid-cols-4 stagger-children ${isVisible ? "reveal-visible" : ""}`}>
           {steps.map((step, idx) => (
-            <div key={idx} className="relative group">
-              <span className="font-display text-6xl text-gold/10 mb-4 block group-hover:text-gold/25 transition-colors duration-500">
+            <div key={step.number} className="group relative">
+              <span className="mb-4 block font-display text-6xl text-gold/10 transition-colors duration-500 group-hover:text-gold/25">
                 {step.number}
               </span>
-              <div className="w-10 h-[2px] bg-gradient-to-r from-gold to-gold/30 mb-4 group-hover:w-16 transition-all duration-500" />
-              <h3 className="font-display text-xl text-foreground mb-3 group-hover:text-gold transition-colors duration-300">{step.title}</h3>
-              <p className="font-body text-sm text-muted-foreground leading-relaxed">
-                {step.description}
-              </p>
+              <div className="mb-4 h-[2px] w-10 bg-gradient-to-r from-gold to-gold/30 transition-all duration-500 group-hover:w-16" />
+              <h3 className="mb-3 font-display text-xl text-foreground transition-colors duration-300 group-hover:text-gold">
+                {step.title}
+              </h3>
+              <p className="font-body text-sm leading-relaxed text-muted-foreground">{step.description}</p>
               {idx < steps.length - 1 && (
-                <div className="hidden md:block absolute top-10 right-0 w-full h-px bg-gradient-to-r from-transparent via-border to-transparent -z-10 translate-x-1/2" />
+                <div className="absolute right-0 top-10 -z-10 hidden h-px w-full translate-x-1/2 bg-gradient-to-r from-transparent via-border to-transparent md:block" />
               )}
             </div>
           ))}
         </div>
 
-        <div className={`mt-16 text-center transition-all duration-700 delay-500 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}>
+        <div
+          className={`mt-16 text-center transition-all delay-500 duration-700 ${
+            isVisible ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
+          }`}
+        >
           <a
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-shimmer inline-flex items-center gap-3 bg-gold hover:bg-gold-dark text-primary-foreground font-body font-normal text-sm px-8 py-4 rounded-full transition-all duration-300 shadow-card hover:shadow-elevated hover:scale-[1.03] active:scale-[0.98]"
+            className="btn-shimmer inline-flex items-center gap-3 rounded-full bg-gold px-8 py-4 font-body text-sm font-normal text-primary-foreground shadow-card transition-all duration-300 hover:scale-[1.03] hover:bg-gold-dark hover:shadow-elevated active:scale-[0.98]"
           >
             AGENDAR CONSULTA
-            <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <path d="M5 12h14M12 5l7 7-7 7" />
             </svg>
           </a>
