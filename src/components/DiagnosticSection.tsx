@@ -14,7 +14,7 @@ const steps = [
     number: "02",
     title: "Exames diagnósticos",
     description:
-      "Solicitação de exames complementares, como ultrassonografia, exames de sangue, tomografia ou endoscopia, para um diagnóstico preciso.",
+      "Solicitação de exames complementares, como ultrassonografia, exames de sangue, tomografia, endoscopia ou colonoscopia, para um diagnóstico preciso.",
   },
   {
     number: "03",
