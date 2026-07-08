@@ -8,9 +8,9 @@ const WHATSAPP_URL =
 const EMAIL = "dramarianahassan@gmail.com";
 
 const LOCATION_LINES = [
-  "Av. Ayrton Senna, 3000, Rio de Janeiro",
+  "Avenida Ayrton Senna, 3000",
   "Via Parque Comfort Working",
-  "Edifício Itanhangá, Sala 3095",
+  "Sala 3095 / Prédio Itanhangá",
 ];
 
 const MAP_QUERY = LOCATION_LINES.join(", ");
