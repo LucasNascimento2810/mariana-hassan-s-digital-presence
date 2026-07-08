@@ -81,7 +81,7 @@ const DoctorSection = () => {
             <ul className="mb-8 space-y-3">
               {[
                 "Cirurgiã geral e endoscopista",
-                "CRM-RJ 52.108898-6",
+                "CRM-RJ 52.928550",
                 "Residência em Cirurgia Geral - HCT-CO",
                 "Residência em Endoscopia Digestiva - UNIRIO",
               ].map((item) => (

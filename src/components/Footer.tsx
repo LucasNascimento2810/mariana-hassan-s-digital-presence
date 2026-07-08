@@ -168,7 +168,7 @@ const Footer = () => {
 
         <div className="border-t border-primary-foreground/10 pt-8 text-center">
           <p className="font-body text-xs text-primary-foreground/50">
-            Dra. Mariana Hassan | CRM-RJ 52.108898-6 | © {currentYear} Todos os direitos reservados.
+            Dra. Mariana Hassan | CRM-RJ 52.928550 | © {currentYear} Todos os direitos reservados.
           </p>
         </div>
       </div>

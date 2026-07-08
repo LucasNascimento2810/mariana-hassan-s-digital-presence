@@ -39,7 +39,7 @@ const HeroSection = () => {
             <span className="inline-block h-px w-6 bg-gold" />
             Dra. Mariana Hassan
           </p>
-          <p className="mb-7 font-body text-xs text-muted-foreground">CRM-RJ 52.108898-6</p>
+          <p className="mb-7 font-body text-xs text-muted-foreground">CRM-RJ 52.928550</p>
 
           <h1 className="mb-6 max-w-[52rem] font-display text-4xl font-light leading-[1.04] text-foreground sm:text-[3.4rem] md:text-[4.05rem] lg:text-[4.65rem] xl:text-[5.05rem] 2xl:text-[5.35rem]">
             Colonoscopia aos 45+:<br />
