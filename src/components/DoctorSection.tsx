@@ -5,8 +5,8 @@ const WHATSAPP_URL =
   "https://api.whatsapp.com/send?phone=5521999065921&text=Ol%C3%A1,%20gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Dra.%20Mariana%20Hassan.";
 
 const metrics = [
-  { value: "+2.300", label: "Exames" },
-  { value: "+4.500", label: "Cirurgias" },
+  { value: "+4.500", label: "Exames" },
+  { value: "+2.300", label: "Cirurgias" },
   { value: "+10", label: "Anos de atuação" },
 ];
 

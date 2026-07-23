@@ -7,21 +7,30 @@ const WHATSAPP_URL =
 
 const EMAIL = "dramarianahassan@gmail.com";
 
-const LOCATION_LINES = [
-  "Avenida Ayrton Senna, 3000",
-  "Via Parque Comfort Working",
-  "Sala 3095 / Prédio Itanhangá",
+const LOCATIONS = [
+  {
+    name: "Barra da Tijuca",
+    lines: [
+      "Av. Ayrton Senna, 3000 - Sala 3095",
+      "Comfort Working - Edifício Itanhangá",
+    ],
+    query:
+      "Av. Ayrton Senna, 3000, Sala 3095, Edifício Itanhangá, Barra da Tijuca, Rio de Janeiro - RJ",
+  },
+  {
+    name: "Duque de Caxias",
+    lines: [
+      "Rua Marechal Deodoro, 392, térreo - Sala 6",
+      "Jardim 25 de Agosto",
+    ],
+    query:
+      "Rua Marechal Deodoro, 392, térreo, Sala 6, Jardim 25 de Agosto, Duque de Caxias - RJ",
+  },
 ];
 
-const MAP_QUERY = LOCATION_LINES.join(", ");
-
 const MAP_EMBED_URL = `https://www.google.com/maps?q=${encodeURIComponent(
-  MAP_QUERY
+  LOCATIONS[0].query
 )}&z=15&output=embed`;
-
-const MAPS_URL = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-  MAP_QUERY
-)}`;
 
 const Footer = () => {
   const { ref, isVisible } = useScrollReveal();
@@ -64,15 +73,22 @@ const Footer = () => {
               Localização
             </h3>
 
-            <div className="group mb-4 flex items-start gap-3">
-              <MapPin className="mt-1 h-4 w-4 flex-shrink-0 text-gold transition-transform duration-300 group-hover:scale-110" />
-              <p className="font-body text-sm text-primary-foreground/70">
-                {LOCATION_LINES.map((line) => (
-                  <span key={line} className="block">
-                    {line}
-                  </span>
-                ))}
-              </p>
+            <div className="mb-5 space-y-5">
+              {LOCATIONS.map((location) => (
+                <div key={location.name} className="group flex items-start gap-3">
+                  <MapPin className="mt-1 h-4 w-4 flex-shrink-0 text-gold transition-transform duration-300 group-hover:scale-110" />
+                  <p className="font-body text-sm text-primary-foreground/70">
+                    <span className="mb-1 block font-medium text-primary-foreground">
+                      {location.name}
+                    </span>
+                    {location.lines.map((line) => (
+                      <span key={line} className="block">
+                        {line}
+                      </span>
+                    ))}
+                  </p>
+                </div>
+              ))}
             </div>
 
             <div className="group mb-4 flex items-start gap-3">
@@ -146,7 +162,7 @@ const Footer = () => {
 
             <div className="overflow-hidden rounded-[1.1rem] border border-primary-foreground/10 bg-primary-foreground/5 shadow-elevated">
               <iframe
-                title="Mapa do consultório da Dra. Mariana Hassan"
+                title="Mapa do consultório da Dra. Mariana Hassan na Barra da Tijuca"
                 src={MAP_EMBED_URL}
                 className="h-[220px] w-full border-0"
                 loading="lazy"
@@ -154,15 +170,20 @@ const Footer = () => {
               />
             </div>
 
-            <a
-              href={MAPS_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-4 inline-flex items-center gap-2 rounded-full border border-gold/30 px-5 py-2.5 font-body text-sm text-gold transition-all duration-300 hover:border-gold hover:bg-gold/10 hover:text-gold-light"
-            >
-              <MapPin className="h-4 w-4" />
-              Abrir no Google Maps
-            </a>
+            <div className="mt-4 flex flex-col items-start gap-2.5">
+              {LOCATIONS.map((location) => (
+                <a
+                  key={location.name}
+                  href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(location.query)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full border border-gold/30 px-4 py-2 font-body text-xs text-gold transition-all duration-300 hover:border-gold hover:bg-gold/10 hover:text-gold-light"
+                >
+                  <MapPin className="h-3.5 w-3.5" />
+                  Mapa: {location.name}
+                </a>
+              ))}
+            </div>
           </div>
         </div>
 
